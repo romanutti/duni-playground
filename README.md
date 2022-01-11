@@ -14,7 +14,7 @@ If your setup already has some of the required tools installed, please adjust ac
    Node: **12.14.1**  
    Package Manager: **npm 7.23.0**
 4. Install a new version of IntelliJ
-5. Clone the master branch with `git clone https://github.com/romanutti/reading-list.git`
+5. Clone the master branch with `git clone https://github.com/romanutti/duni-playground.git`
 6. Open the project with IntelliJ and let gradle build the project
 7. Install the npm dependencies with `cd frontend` followed by `npm install`
 
