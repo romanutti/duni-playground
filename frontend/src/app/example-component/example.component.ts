@@ -6,7 +6,7 @@ import {ExampleDto} from "../../model/example/ExampleDto";
 @Component({
   selector: 'app-example-component',
   templateUrl: './example.component.html',
-  styleUrls: ['./example.component.scss']
+  styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements OnInit {
 
