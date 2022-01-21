@@ -1,4 +1,4 @@
-package ch.zuehlke.fullstack.model;
+package ch.zuehlke.fullstack.domain.model;
 
 import java.util.Date;
 import java.util.List;

@@ -1,6 +1,6 @@
-package ch.zuehlke.fullstack.service;
+package ch.zuehlke.fullstack.domain.service;
 
-import ch.zuehlke.fullstack.model.Book;
+import ch.zuehlke.fullstack.domain.model.Book;
 
 import java.util.List;
 

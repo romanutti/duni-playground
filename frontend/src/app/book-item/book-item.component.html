@@ -1,0 +1,12 @@
+<div *ngIf="currentBook" class="ui middle aligned selection divided list">
+  <a class="item" >
+    <img *ngIf="currentBook.thumbnails" src="{{currentBook.thumbnails[0].url}}" class="ui tiny image" alt="{{currentBook.thumbnails[0].description}}">
+    <div class="content">
+      <div class="header">{{currentBook.title}}</div>
+      <div class="description">{{currentBook.subtitle}}</div>
+      <div class="description">
+        <span *ngFor="let author of currentBook.authors; last as l">{{author}}<span *ngIf="!l">, </span></span>
+      </div>
+    </div>
+  </a>
+</div>

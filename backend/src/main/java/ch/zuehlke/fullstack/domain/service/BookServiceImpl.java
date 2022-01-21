@@ -1,7 +1,6 @@
-package ch.zuehlke.fullstack.service;
+package ch.zuehlke.fullstack.domain.service;
 
-import ch.zuehlke.fullstack.model.Book;
-import com.google.common.collect.Maps;
+import ch.zuehlke.fullstack.domain.model.Book;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
-@Profile("dev")
+@Profile("default")
 public class BookServiceImpl implements BookService {
 
     @Override

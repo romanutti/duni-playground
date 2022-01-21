@@ -1,7 +1,7 @@
-package ch.zuehlke.fullstack.controller;
+package ch.zuehlke.fullstack.api;
 
-import ch.zuehlke.fullstack.model.ExampleDto;
-import ch.zuehlke.fullstack.service.ExampleService;
+import ch.zuehlke.fullstack.domain.model.Book;
+import ch.zuehlke.fullstack.domain.service.BookService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -12,27 +12,28 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/api/example")
-public class ExampleController {
+import java.util.List;
 
-    private final ExampleService exampleService;
+@RestController
+@RequestMapping("/api")
+public class BookController {
+
+    private final BookService bookService;
 
     @Autowired
-    public ExampleController(ExampleService exampleService) {
-        this.exampleService = exampleService;
+    public BookController(BookService bookService) {
+        this.bookService = bookService;
     }
 
-    @ApiOperation(value = "Example demo DTO",
-            notes = "This can be used to enrich swagger documentation")
+    @ApiOperation(value = "Get all Books")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully returned example"),
             @ApiResponse(code = 500, message = "If something fails internally")})
-    @GetMapping
-    public ResponseEntity<ExampleDto> getExample() {
-        ExampleDto result;
+    @GetMapping("/books")
+    public ResponseEntity<List<Book>> getAllBooks() {
+        List<Book> result;
         try {
-            result = this.exampleService.getExampleDto();
+            result = this.bookService.getAllBooks();
         } catch (Exception exception) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
