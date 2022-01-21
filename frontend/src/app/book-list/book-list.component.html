@@ -1,1 +1,3 @@
-<app-book-item *ngFor="let book of books" [currentBook]="book" ></app-book-item>
+<div>
+  <app-book-item *ngFor="let book of books" [currentBook]="book" [routerLink]="book.isbn"></app-book-item>
+</div>
