@@ -1,10 +1,15 @@
 package ch.zuehlke.fullstack.domain.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-public class Book {
+public class BookDto {
+
+    private Integer id;
     private String isbn;
     private String title;
     private List<String> authorList;
@@ -14,7 +19,8 @@ public class Book {
     private Map<String, String> thumbnails;
     private String description;
 
-    public Book(String isbn, String title, List<String> authorList, Date publishDate, String subtitle, Double rating, Map<String, String> thumbnails, String description) {
+    public BookDto(Integer id, String isbn, String title, List<String> authorList, Date publishDate, String subtitle, Double rating, Map<String, String> thumbnails, String description) {
+        this.id = id;
         this.isbn = isbn;
         this.title = title;
         this.authorList = authorList;
@@ -23,6 +29,14 @@ public class Book {
         this.rating = rating;
         this.thumbnails = thumbnails;
         this.description = description;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getIsbn() {

@@ -1,6 +1,6 @@
 package ch.zuehlke.fullstack.api;
 
-import ch.zuehlke.fullstack.domain.model.Book;
+import ch.zuehlke.fullstack.domain.model.BookDto;
 import ch.zuehlke.fullstack.domain.service.BookService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -30,8 +30,8 @@ public class BookController {
             @ApiResponse(code = 200, message = "Successfully returned example"),
             @ApiResponse(code = 500, message = "If something fails internally")})
     @GetMapping("/books")
-    public ResponseEntity<List<Book>> getAllBooks() {
-        List<Book> result;
+    public ResponseEntity<List<BookDto>> getAllBooks() {
+        List<BookDto> result;
         try {
             result = this.bookService.getAllBooks();
         } catch (Exception exception) {
