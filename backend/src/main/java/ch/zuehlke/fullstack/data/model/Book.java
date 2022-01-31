@@ -26,6 +26,7 @@ public class Book {
     @ElementCollection
     private Map<String, String> thumbnails;
 
+    @Column(columnDefinition="varchar(1000)")
     private String description;
 
     public Book(Integer id, String isbn, String title, List<String> authorList, Date publishDate, String subtitle, Double rating, Map<String, String> thumbnails, String description) {

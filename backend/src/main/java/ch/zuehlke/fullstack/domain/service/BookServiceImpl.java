@@ -13,10 +13,10 @@ import java.util.List;
 @Profile("default")
 public class BookServiceImpl implements BookService {
 
-    @Autowired
     private final BookRepository bookRepository;
     private final BookMapper mapper;
 
+    @Autowired
     public BookServiceImpl(BookRepository bookRepository, BookMapper mapper) {
         this.bookRepository = bookRepository;
         this.mapper = mapper;
