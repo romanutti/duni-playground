@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class TraceAspect {
-    Logger logger = LoggerFactory.getLogger(getClass());
+    final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Before("execution(* ch.zuehlke.fullstack.api.ExampleController.getExample())")
     public void demo() {
