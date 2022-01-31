@@ -3,6 +3,7 @@ package ch.zuehlke.fullstack.domain.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -16,10 +17,11 @@ public class BookDto {
     private Date publishDate;
     private String subtitle;
     private Double rating;
-    private Map<String, String> thumbnails;
+//    private List<ThumbnailDto> thumbnails = new ArrayList<>();
+    private List<ThumbnailDto> thumbnails;
     private String description;
 
-    public BookDto(Integer id, String isbn, String title, List<String> authorList, Date publishDate, String subtitle, Double rating, Map<String, String> thumbnails, String description) {
+    public BookDto(Integer id, String isbn, String title, List<String> authorList, Date publishDate, String subtitle, Double rating, List<ThumbnailDto> thumbnails, String description){
         this.id = id;
         this.isbn = isbn;
         this.title = title;
@@ -29,6 +31,10 @@ public class BookDto {
         this.rating = rating;
         this.thumbnails = thumbnails;
         this.description = description;
+
+//        for(String key: thumbnails.keySet()) {
+//            this.thumbnails.add(new ThumbnailDto(key, thumbnails.get(key)));
+//        }
     }
 
     public Integer getId() {
@@ -87,13 +93,21 @@ public class BookDto {
         this.rating = rating;
     }
 
-    public Map<String, String>  getThumbnails() {
+    public List<ThumbnailDto> getThumbnails() {
         return thumbnails;
     }
 
-    public void setThumbnails(Map<String, String>  thumbnails) {
+    public void setThumbnails(List<ThumbnailDto> thumbnails) {
         this.thumbnails = thumbnails;
     }
+
+    //    public Map<String, String> getThumbnails() {
+//        return thumbnails;
+//    }
+//
+//    public void setThumbnails(Map<String, String> thumbnails) {
+//        this.thumbnails = thumbnails;
+//    }
 
     public String getDescription() {
         return description;

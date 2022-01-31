@@ -5,7 +5,7 @@
       <div class="header">{{currentBook.title}}</div>
       <div class="description">{{currentBook.subtitle}}</div>
       <div class="description">
-        <span *ngFor="let author of currentBook.authors; last as l">{{author}}<span *ngIf="!l">, </span></span>
+        <span *ngFor="let author of currentBook.authorList; last as l">{{author}}<span *ngIf="!l">, </span></span>
       </div>
     </div>
   </a>

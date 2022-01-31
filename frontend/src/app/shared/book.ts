@@ -1,8 +1,8 @@
 export interface Book {
   isbn: string;
   title: string;
-  authors: string[];
-  published: Date;
+  authorList: string[];
+  publishDate: Date;
   subtitle: string;
   rating?: number;
   thumbnails?: Thumbnail[];

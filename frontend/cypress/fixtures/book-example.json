@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "isbn": "978-1-4920-7698-8",
+    "title": "Spring Boot: Up and running",
+    "authorList": [
+      "Martin Heckler"
+    ],
+    "publishDate": "2019-12-31T23:00:00.000+00:00",
+    "subtitle": "Building Cloud Native Java and Kotlin Applications",
+    "rating": 5.0,
+    "thumbnails": [
+      {
+        "url": "https://assets.thalia.media/img/artikel/fce0f87046dcbf48cb73e0d96eb8e758c2a31ab0-00-00.jpeg",
+        "description": "Cover"
+      }
+    ],
+    "description": "Spring Boot is the most widely used Java framework available. Its ease and power have revolutionized application development from monoliths to microservices. Yet Spring Boots simplicity can also be confounding. This practical book shows you how to use this framework to write successful mission-critical applications."
+  }
+]
