@@ -17,11 +17,10 @@ public class BookDto {
     private Date publishDate;
     private String subtitle;
     private Double rating;
-//    private List<ThumbnailDto> thumbnails = new ArrayList<>();
     private List<ThumbnailDto> thumbnails;
     private String description;
 
-    public BookDto(Integer id, String isbn, String title, List<String> authorList, Date publishDate, String subtitle, Double rating, List<ThumbnailDto> thumbnails, String description){
+    public BookDto(Integer id, String isbn, String title, List<String> authorList, Date publishDate, String subtitle, Double rating, List<ThumbnailDto> thumbnails, String description) {
         this.id = id;
         this.isbn = isbn;
         this.title = title;
@@ -31,10 +30,6 @@ public class BookDto {
         this.rating = rating;
         this.thumbnails = thumbnails;
         this.description = description;
-
-//        for(String key: thumbnails.keySet()) {
-//            this.thumbnails.add(new ThumbnailDto(key, thumbnails.get(key)));
-//        }
     }
 
     public Integer getId() {
@@ -100,14 +95,6 @@ public class BookDto {
     public void setThumbnails(List<ThumbnailDto> thumbnails) {
         this.thumbnails = thumbnails;
     }
-
-    //    public Map<String, String> getThumbnails() {
-//        return thumbnails;
-//    }
-//
-//    public void setThumbnails(Map<String, String> thumbnails) {
-//        this.thumbnails = thumbnails;
-//    }
 
     public String getDescription() {
         return description;
