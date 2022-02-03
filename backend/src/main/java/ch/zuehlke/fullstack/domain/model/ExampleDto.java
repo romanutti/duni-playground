@@ -1,6 +1,8 @@
 package ch.zuehlke.fullstack.domain.model;
 
+import ch.zuehlke.fullstack.annotations.ExampleAnnotation;
 
+@ExampleAnnotation()
 public class ExampleDto {
 
     private final int id;

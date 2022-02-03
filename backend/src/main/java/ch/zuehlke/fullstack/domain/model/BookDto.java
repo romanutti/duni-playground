@@ -1,13 +1,11 @@
 package ch.zuehlke.fullstack.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.ArrayList;
+import ch.zuehlke.fullstack.annotations.ExampleAnnotation;
+
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
+@ExampleAnnotation
 public class BookDto {
 
     private Integer id;
@@ -31,6 +29,8 @@ public class BookDto {
         this.thumbnails = thumbnails;
         this.description = description;
     }
+
+    public BookDto() {}
 
     public Integer getId() {
         return id;
